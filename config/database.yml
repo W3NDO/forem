@@ -29,6 +29,8 @@ development:
   <<: *default
   url: <%= ENV.fetch("DATABASE_URL", "postgres:///Forem_development") %>
   database: <%= ENV.fetch("DATABASE_NAME", "Forem_development") %>
+  username: <%= ENV.fetch("DATABASE_USERNAME", "viprails") %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD", "viprails_1") %>
   variables:
       statement_timeout: <%= ENV.fetch("STATEMENT_TIMEOUT", 10_000).to_i %>
 
